@@ -1,269 +1,1020 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Silvia Gilwanová. Ilustrações, pinturas, ancestralidade indígena e feminino. Ateliê Casa Hateva, Mogi das Cruzes, SP.">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>Silvia Gilwanová - Artista Visual</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset e Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+        html {
+            scroll-behavior: smooth;
+        }
 
-<title>Silvia Gilwanová</title>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEFDFB;
+            color: #1A1A1A;
+            line-height: 1.6;
+        }
 
-<style>
-body { margin:0; font-family: Arial; }
+        /* Tipografia */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
 
-/* TOPO */
-.topbar {
-  position: fixed;
-  top:0;
-  width:100%;
-  background:#fff;
-  text-align:center;
-  padding:25px;
-  font-size:34px;
-  font-family:'Playfair Display', serif;
-  border-bottom:1px solid #eee;
-  z-index:1000;
-}
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
 
-/* SIDEBAR */
-.sidebar {
-  position:fixed;
-  top:100px;
-  left:0;
-  width:230px;
-  height:100%;
-  padding:20px;
-  border-right:1px solid #eee;
-}
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 600;
+        }
 
-.sidebar a {
-  display:block;
-  margin:12px 0;
-  text-decoration:none;
-  color:#111;
-  font-size:13px;
-}
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+        }
 
-/* MAIN */
-.main {
-  margin-left:250px;
-  padding-top:120px;
-}
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(26, 26, 26, 0.9);
+        }
 
-/* SEÇÃO */
-.section { padding:70px 30px; }
+        .text-subtitle {
+            font-size: 0.875rem;
+            color: #6B6B6B;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
 
-.section-content {
-  display:flex;
-  gap:30px;
-}
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-.reverse { flex-direction:row-reverse; }
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
 
-/* TEXTO */
-.text { width:35%; }
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
 
-.text h1 {
-  font-family:'Playfair Display', serif;
-  font-size:26px;
-  margin-bottom:5px;
-}
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: transparent;
+            transition: all 0.4s ease-in-out;
+            padding: 1rem 0;
+        }
 
-.text h2 {
-  font-size:14px;
-  font-weight:normal;
-  color:#666;
-  margin-bottom:15px;
-}
+        header.scrolled {
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #E8E4DC;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
 
-.text p {
-  font-size:14px;
-  line-height:1.6;
-}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
 
-/* GALERIA */
-.gallery {
-  width:65%;
-  column-count:2;
-  column-gap:10px;
-}
+        .logo {
+            text-decoration: none;
+            color: #8B6F47;
+            transition: all 0.4s ease-in-out;
+        }
 
-.item {
-  break-inside:avoid;
-  margin-bottom:10px;
-}
+        .logo:hover {
+            color: rgba(139, 111, 71, 0.8);
+        }
 
-.item img {
-  width:100%;
-  border-radius:4px;
-  cursor:pointer;
-}
+        .logo h1 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
 
-figcaption {
-  font-size:12px;
-  color:#555;
-  margin-top:5px;
-}
+        .logo p {
+            font-size: 0.75rem;
+            color: #6B6B6B;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
 
-/* CONTATO */
-.contact-box {
-  background:#f5f5f5;
-  padding:20px;
-  margin:40px 30px;
-  border-radius:6px;
-  font-size:14px;
-}
+        nav {
+            display: none;
+            gap: 2rem;
+        }
 
-/* FOOTER */
-.footer {
-  text-align:center;
-  font-size:12px;
-  padding:30px;
-  color:#555;
-}
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+            }
+        }
 
-/* WHATS */
-.whatsapp {
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#25D366;
-  color:white;
-  padding:12px 16px;
-  border-radius:50px;
-  text-decoration:none;
-}
+        nav a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: rgba(26, 26, 26, 0.7);
+            text-decoration: none;
+            transition: all 0.4s ease-in-out;
+            position: relative;
+        }
 
-/* MOBILE */
-@media(max-width:900px){
-  .sidebar{display:none;}
-  .main{margin:0;}
-  .section-content{flex-direction:column;}
-  .text,.gallery{width:100%;}
-  .gallery{column-count:1;}
-}
-</style>
+        nav a:hover {
+            color: #8B6F47;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8B6F47;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: #1A1A1A;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 4rem;
+            left: 0;
+            right: 0;
+            background: #FEFDFB;
+            border-bottom: 1px solid #E8E4DC;
+            padding: 1rem;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: rgba(26, 26, 26, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .mobile-menu a:hover {
+            color: #8B6F47;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            background: #FEFDFB;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 10rem;
+                padding-bottom: 8rem;
+            }
+        }
+
+        .hero-text h2 {
+            margin-bottom: 1rem;
+            color: #1A1A1A;
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: #6B6B6B;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text .accent {
+            color: #8B6F47;
+            font-weight: 600;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .hero-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            aspect-ratio: 1;
+            cursor: pointer;
+            animation: fadeInScale 0.6s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .hero-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-item:hover .hero-overlay {
+            opacity: 1;
+        }
+
+        .hero-overlay-text {
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            padding: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Seções */
+        section {
+            border-bottom: 1px solid rgba(232, 228, 220, 0.5);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                padding: 8rem 0;
+            }
+        }
+
+        .section.alternate {
+            background: rgba(45, 80, 22, 0.02);
+        }
+
+        .section-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .section-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .section-content.reverse {
+            direction: rtl;
+        }
+
+        .section-content.reverse > * {
+            direction: ltr;
+        }
+
+        .section-text h2 {
+            margin-bottom: 1rem;
+            color: #1A1A1A;
+        }
+
+        .section-text .subtitle {
+            color: #8B6F47;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+        }
+
+        .section-text p {
+            color: rgba(26, 26, 26, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-image {
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .section-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .section-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 0.5rem;
+            aspect-ratio: 1;
+            animation: fadeInScale 0.6s ease-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: rgba(45, 80, 22, 0.02);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            border: 1px solid #E8E4DC;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease-in-out;
+            animation: fadeInScale 0.6s ease-out;
+        }
+
+        .contact-card:hover {
+            border-color: rgba(139, 111, 71, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-card-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(139, 111, 71, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .contact-card:hover .contact-card-icon {
+            background: rgba(139, 111, 71, 0.2);
+        }
+
+        .contact-card-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #8B6F47;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .contact-card p {
+            font-size: 0.875rem;
+            color: #6B6B6B;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .contact-card:hover p {
+            color: #8B6F47;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.75rem 1.5rem;
+            background: #8B6F47;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.4s ease-in-out;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: rgba(139, 111, 71, 0.9);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(26, 26, 26, 0.05);
+            border-top: 1px solid #E8E4DC;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6B6B6B;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #E8E4DC;
+        }
+
+        .footer-links a {
+            color: #6B6B6B;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .footer-links a:hover {
+            color: #8B6F47;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease-in-out;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            text-align: center;
+            margin-top: 3rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        .scroll-indicator svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: rgba(139, 111, 71, 0.5);
+        }
+
+        /* Animações ao scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsividade */
+        @media (max-width: 640px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <h1>Silvia Gilwanová</h1>
+                    <p>ARTISTA VISUAL</p>
+                </a>
+                
+                <nav id="nav">
+                    <a href="#illustrations">Ilustrações</a>
+                    <a href="#indigenous">Indígenas</a>
+                    <a href="#nature">Natureza</a>
+                    <a href="#feminine">Feminino</a>
+                    <a href="#book">Livro</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#contact">Contato</a>
+                </nav>
 
-<div class="topbar">Silvia Gilwanová</div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
 
-<div class="sidebar">
-  <a href="#s1">Ilustrações e Pinturas</a>
-  <a href="#s2">Indígenas Sementes de Sol</a>
-  <a href="#s3">Natureza</a>
-  <a href="#s4">Feminino</a>
-  <a href="#s5">Livro</a>
-  <a href="#s6">A Artista</a>
-</div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#illustrations" onclick="closeMobileMenu()">Ilustrações</a>
+            <a href="#indigenous" onclick="closeMobileMenu()">Indígenas</a>
+            <a href="#nature" onclick="closeMobileMenu()">Natureza</a>
+            <a href="#feminine" onclick="closeMobileMenu()">Feminino</a>
+            <a href="#book" onclick="closeMobileMenu()">Livro</a>
+            <a href="#about" onclick="closeMobileMenu()">Sobre</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contato</a>
+        </div>
+    </header>
 
-<div class="main">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h2>Te convido a conhecer</h2>
+                <p>o meu trabalho artístico</p>
+                <p class="accent">Seja muito bem vindo!</p>
+            </div>
 
-<!-- SEÇÃO 1 -->
-<section id="s1" class="section">
-<div class="section-content">
-<div class="text">
-<h1>Ilustrações e Pinturas</h1>
-<h2>O Feminino e a Terra</h2>
-<p>Expressões visuais que conectam corpo, natureza e espiritualidade feminina.</p>
-</div>
-<div class="gallery">
-<div class="item"><figure><img src="https://picsum.photos/400/600"><figcaption>Obra 1</figcaption></figure></div>
-<div class="item"><figure><img src="https://picsum.photos/400/500"><figcaption>Obra 2</figcaption></figure></div>
-</div>
-</div>
-</section>
+            <div class="hero-grid">
+                <a href="#about" class="hero-item">
+                    <img src="https://picsum.photos/600/600?1" alt="Artista 2026">
+                    <div class="hero-overlay">
+                        <div class="hero-overlay-text">Artista 2026</div>
+                    </div>
+                </a>
 
-<!-- SEÇÃO 2 -->
-<section id="s2" class="section">
-<div class="section-content reverse">
-<div class="text">
-<h1>Indígenas Sementes de Sol</h1>
-<h2>Representação da ancestralidade viva e conexão com a terra</h2>
-<p>Trabalhos que evocam a memória dos povos originários e sua relação espiritual com o território.</p>
-</div>
-<div class="gallery">
-<div class="item"><figure><img src="https://picsum.photos/400/550"><figcaption>Obra indígena</figcaption></figure></div>
-</div>
-</div>
-</section>
+                <a href="#illustrations" class="hero-item">
+                    <img src="https://picsum.photos/600/600?2" alt="Ilustrações e Pinturas">
+                    <div class="hero-overlay">
+                        <div class="hero-overlay-text">Ilustrações e Pinturas<br>O Feminino e Natureza</div>
+                    </div>
+                </a>
 
-<!-- SEÇÃO 3 -->
-<section id="s3" class="section">
-<div class="section-content">
-<div class="text">
-<h1>Ilustrações e Pinturas</h1>
-<h2>O Feminino e a Terra</h2>
-<p>Explorações visuais da natureza e seus ciclos.</p>
-</div>
-<div class="gallery">
-<div class="item"><figure><img src="https://picsum.photos/400/520"><figcaption>Natureza viva</figcaption></figure></div>
-</div>
-</div>
-</section>
+                <a href="#book" class="hero-item">
+                    <img src="https://picsum.photos/600/600?3" alt="Livro">
+                    <div class="hero-overlay">
+                        <div class="hero-overlay-text">As Iniciações Femininas</div>
+                    </div>
+                </a>
 
-<!-- SEÇÃO 4 -->
-<section id="s4" class="section">
-<div class="section-content reverse">
-<div class="text">
-<h1>Ilustrações e Pinturas o Feminino</h1>
-<h2>Ilustrações e Pinturas em Tinta Acrílica e Aquarela</h2>
-<p>Obras que exploram técnica e sensibilidade.</p>
-</div>
-<div class="gallery">
-<div class="item"><figure><img src="https://picsum.photos/400/530"><figcaption>Aquarela feminina</figcaption></figure></div>
-</div>
-</div>
-</section>
+                <a href="#indigenous" class="hero-item">
+                    <img src="https://picsum.photos/600/600?4" alt="Indígenas">
+                    <div class="hero-overlay">
+                        <div class="hero-overlay-text">Indígenas<br>Sementes de Sol</div>
+                    </div>
+                </a>
+            </div>
 
-<!-- SEÇÃO 5 -->
-<section id="s5" class="section">
-<div class="section-content">
-<div class="text">
-<h1>A Iniciação Feminina</h1>
-<h2>Livro artístico e simbólico</h2>
-<p>Projeto editorial que aborda a jornada de iniciação feminina.</p>
-</div>
-<div class="gallery">
-<div class="item"><figure><img src="https://picsum.photos/400/540"><figcaption>Livro</figcaption></figure></div>
-</div>
-</div>
-</section>
+            <div class="scroll-indicator">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
 
-<!-- SEÇÃO 6 -->
-<section id="s6" class="section">
-<div class="section-content reverse">
-<div class="text">
-<h1>A Artista</h1>
-<h2>Sobre Silvia Gilwanová</h2>
-<p>Artista visual que trabalha com espiritualidade, natureza e feminino como linguagem estética e simbólica.</p>
-</div>
-<div class="gallery">
-<div class="item"><figure><img src="https://picsum.photos/400/560"><figcaption>Retrato</figcaption></figure></div>
-</div>
-</div>
-</section>
+    <!-- Seção 1: Ilustrações -->
+    <section class="section" id="illustrations">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-text">
+                    <h2>Ilustrações e Pinturas</h2>
+                    <p class="subtitle">O Feminino e a Terra</p>
+                    <p>Expressões visuais que conectam corpo e natureza. Cada obra é uma conversa entre o feminino, a ancestralidade e a terra que nos sustenta. Através de cores vibrantes e formas orgânicas, exploro a beleza e a força do ser feminino em harmonia com a natureza.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://picsum.photos/600/600?20" alt="Ilustrações e Pinturas">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=1" alt="Obra 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=2" alt="Obra 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=3" alt="Obra 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=4" alt="Obra 4">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- CONTATO INTERNO -->
-<div class="contact-box">
-<strong>Entre em Contato</strong><br><br>
-WhatsApp: (11) 97037-4811<br>
-E-mail: silviagilwan.art@gmail.com<br>
-Local: Ateliê Casa Hateva, Mogi das Cruzes, SP<br><br>
-Instagram<br>
-Facebook
-</div>
+    <!-- Seção 2: Indígenas -->
+    <section class="section alternate" id="indigenous">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-text">
+                    <h2>Indígenas Sementes de Sol</h2>
+                    <p class="subtitle">Representação da Ancestralidade</p>
+                    <p>Uma série dedicada à representação da ancestralidade indígena e à sabedoria ancestral. Estas obras celebram a conexão profunda com a terra, os espíritos da natureza e a força das comunidades indígenas. Cada pintura é um tributo à resistência e à beleza dos povos originários.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://picsum.photos/600/600?21" alt="Indígenas Sementes de Sol">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/550?random=5" alt="Ancestralidade">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/550?random=6" alt="Sementes de Sol">
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- Seção 3: Natureza -->
+    <section class="section" id="nature">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-text">
+                    <h2>Natureza</h2>
+                    <p class="subtitle">Conexão com a Terra</p>
+                    <p>A natureza é minha maior fonte de inspiração. Através de ilustrações e pinturas, busco capturar a essência dos elementos naturais: plantas, flores, animais e paisagens. Cada obra reflete meu profundo respeito e admiração pela biodiversidade e pela harmonia do mundo natural.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://picsum.photos/600/600?22" alt="Natureza">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=7" alt="Natureza 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=8" alt="Natureza 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=9" alt="Natureza 3">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a class="whatsapp" href="https://wa.me/5511970374811">WhatsApp</a>
+    <!-- Seção 4: Feminino -->
+    <section class="section alternate" id="feminine">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-text">
+                    <h2>Feminino</h2>
+                    <p class="subtitle">Força, Beleza e Sagrado</p>
+                    <p>O feminino é o coração de meu trabalho artístico. Através de formas, cores e símbolos, celebro a força, a beleza e o sagrado do ser feminino. Estas obras exploram temas de empoderamento, sensualidade, maternidade e a conexão profunda com os ciclos da natureza.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://picsum.photos/600/600?23" alt="Feminino">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=10" alt="Feminino 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=11" alt="Feminino 2">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="footer">
-Todos os direitos reservados Casa Hateva<br><br>
-2026 Escola Hateva de Artes. Todos os direitos reservados - 
-Artista Silvia Gilwanová - escolahateva.art.br
-</div>
+    <!-- Seção 5: Livro -->
+    <section class="section" id="book">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-text">
+                    <h2>A Iniciação Feminina</h2>
+                    <p class="subtitle">Livro Artístico</p>
+                    <p>Um projeto especial que combina ilustrações, textos poéticos e reflexões sobre a jornada feminina. Este livro artístico é uma exploração visual e textual dos ritos de passagem, das transformações e da sabedoria que acompanham a vida das mulheres. Uma obra que celebra o poder transformador do feminino.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://picsum.photos/600/600?24" alt="Livro - A Iniciação Feminina">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção 6: Sobre -->
+    <section class="section alternate" id="about">
+        <div class="container">
+            <div class="section-content reverse">
+                <div class="section-text">
+                    <h2>Sobre Silvia Gilwanová</h2>
+                    <p class="subtitle">A Artista</p>
+                    <p>Silvia Gilwanová é uma artista visual dedicada à exploração do feminino, da ancestralidade e da conexão com a natureza. Formada em Artes Plásticas, trabalha com diversas técnicas incluindo pintura, ilustração e arte digital. Seu trabalho é caracterizado pela profundidade emocional, pela paleta de cores vibrantes e pela busca constante de significado espiritual.</p>
+                    <p>Silvia é fundadora do Ateliê Casa Hateva, um espaço dedicado à criação artística e ao ensino de artes. Sua missão é inspirar outras pessoas a reconectar com sua criatividade, com a natureza e com o sagrado feminino.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://picsum.photos/600/600?25" alt="Silvia Gilwanová">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Entre em Contato</h2>
+            <p style="text-align: center; color: #6B6B6B; margin-bottom: 3rem;">Gostaria de conversar sobre um projeto ou colaboração?</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>E-mail</h3>
+                    <p>silviagilwan.art@gmail.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>(11) 97037-4811</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Localização</h3>
+                    <p>Ateliê Casa Hateva<br>Mogi das Cruzes, SP</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://wa.me/5511970374811" class="cta-button">Enviar Mensagem via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Silvia Gilwanová. Todos os direitos reservados.</p>
+            <p>Ateliê Casa Hateva | Mogi das Cruzes, SP</p>
+            <p>Escola Hateva de Artes • escolahateva.art.br</p>
+            
+            <div class="footer-links">
+                <a href="https://wa.me/5511970374811">WhatsApp</a>
+                <a href="mailto:silviagilwan.art@gmail.com">E-mail</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511970374811" class="whatsapp-btn" title="Enviar mensagem via WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.39 1.242-3.286 2.138-1.604 1.603-2.504 3.756-2.504 6.035 0 2.278.9 4.432 2.504 6.035 1.604 1.604 3.756 2.504 6.035 2.504 2.278 0 4.432-.9 6.035-2.504 1.604-1.603 2.504-3.756 2.504-6.035 0-2.279-.9-4.432-2.504-6.035-1.603-1.604-3.756-2.504-6.035-2.504zm0-2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        function closeMobileMenu() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Intersection Observer para animações ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos
+        document.querySelectorAll('.section-text, .section-image, .gallery-item, .contact-card, .hero-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
