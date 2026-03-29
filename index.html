@@ -3,273 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
 <title>Silvia Gilwanová</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+body { margin:0; font-family: Arial; }
 
-/* TOPO FIXO */
+/* TOPO */
 .topbar {
   position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  text-align: center;
-  padding: 25px;
-  font-size: 28px;
-  letter-spacing: 3px;
-  border-bottom: 1px solid #eee;
-  z-index: 1000;
+  top:0;
+  width:100%;
+  background:#fff;
+  text-align:center;
+  padding:25px;
+  font-size:34px;
+  font-family:'Playfair Display', serif;
+  border-bottom:1px solid #eee;
+  z-index:1000;
 }
 
 /* SIDEBAR */
 .sidebar {
-  position: fixed;
-  top: 100px;
-  left: 0;
-  width: 220px;
-  height: calc(100vh - 100px);
-  padding: 20px;
-  border-right: 1px solid #eee;
-  background: #fff;
-  overflow-y: auto;
-}
-
-.sidebar h1 {
-  font-size: 14px;
-  margin-bottom: 10px;
+  position:fixed;
+  top:100px;
+  left:0;
+  width:230px;
+  height:100%;
+  padding:20px;
+  border-right:1px solid #eee;
 }
 
 .sidebar a {
-  display: block;
-  text-decoration: none;
-  color: #111;
-  margin: 8px 0;
-  font-size: 13px;
-}
-
-/* CAIXA CONTATO */
-.contact-box {
-  margin-top: 20px;
-  background: #f1f1f1;
-  padding: 12px;
-  font-size: 12px;
-  border-radius: 6px;
-}
-
-.contact-box strong {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.contact-box a {
-  display: block;
-  color: #111;
-  text-decoration: none;
-  margin-top: 5px;
+  display:block;
+  margin:12px 0;
+  text-decoration:none;
+  color:#111;
+  font-size:13px;
 }
 
 /* MAIN */
 .main {
-  margin-left: 240px;
-  padding-top: 120px;
+  margin-left:250px;
+  padding-top:120px;
 }
 
-/* SEÇÕES */
-.section {
-  padding: 60px 30px;
-}
+/* SEÇÃO */
+.section { padding:70px 30px; }
 
 .section-content {
-  display: flex;
-  gap: 30px;
+  display:flex;
+  gap:30px;
 }
 
-.reverse {
-  flex-direction: row-reverse;
-}
+.reverse { flex-direction:row-reverse; }
 
 /* TEXTO */
-.text {
-  width: 35%;
+.text { width:35%; }
+
+.text h1 {
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  margin-bottom:5px;
 }
 
 .text h2 {
-  font-size: 16px;
+  font-size:14px;
+  font-weight:normal;
+  color:#666;
+  margin-bottom:15px;
 }
 
 .text p {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size:14px;
+  line-height:1.6;
 }
 
 /* GALERIA */
 .gallery {
-  width: 65%;
-  column-count: 2;
-  column-gap: 10px;
+  width:65%;
+  column-count:2;
+  column-gap:10px;
 }
 
 .item {
-  break-inside: avoid;
-  margin-bottom: 10px;
+  break-inside:avoid;
+  margin-bottom:10px;
 }
 
 .item img {
-  width: 100%;
-  border-radius: 4px;
-  cursor: pointer;
+  width:100%;
+  border-radius:4px;
+  cursor:pointer;
 }
 
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 16px;
-  border-radius: 50px;
-  text-decoration: none;
+figcaption {
+  font-size:12px;
+  color:#555;
+  margin-top:5px;
 }
 
-/* RODAPÉ */
+/* CONTATO */
+.contact-box {
+  background:#f5f5f5;
+  padding:20px;
+  margin:40px 30px;
+  border-radius:6px;
+  font-size:14px;
+}
+
+/* FOOTER */
 .footer {
-  text-align: center;
-  font-size: 12px;
-  padding: 30px 20px;
-  color: #555;
+  text-align:center;
+  font-size:12px;
+  padding:30px;
+  color:#555;
 }
 
-/* LIGHTBOX */
-.lightbox {
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  display:none;
-  background: rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-}
-
-.lightbox img {
-  max-width:90%;
-  max-height:90%;
+/* WHATS */
+.whatsapp {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:white;
+  padding:12px 16px;
+  border-radius:50px;
+  text-decoration:none;
 }
 
 /* MOBILE */
-@media(max-width: 900px){
-  .sidebar { display: none; }
-  .main { margin: 0; }
-
-  .section-content {
-    flex-direction: column;
-  }
-
-  .text, .gallery {
-    width: 100%;
-  }
-
-  .gallery {
-    column-count: 1;
-  }
+@media(max-width:900px){
+  .sidebar{display:none;}
+  .main{margin:0;}
+  .section-content{flex-direction:column;}
+  .text,.gallery{width:100%;}
+  .gallery{column-count:1;}
 }
 </style>
-
 </head>
+
 <body>
 
-<!-- TOPO -->
-<div class="topbar">
-  Silvia Gilwanová
-</div>
+<div class="topbar">Silvia Gilwanová</div>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
-  <h1>ARTISTA</h1>
-  <a href="#feminino">Feminino Sagrado</a>
-  <a href="#natureza">Natureza</a>
-  <a href="#indigenas">Indígenas Semente Sol</a>
-
-  <!-- CONTATO -->
-  <div class="contact-box">
-    <strong>Entre em Contato</strong>
-    WhatsApp: (11) 97037-4811<br>
-    E-mail: silviagilwan.art@gmail.com<br>
-    Local: Ateliê Casa Hateva, Mogi das Cruzes, SP
-
-    <a href="https://www.instagram.com/silviagilvanova.art" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/silvia.desimone.792" target="_blank">Facebook</a>
-  </div>
+  <a href="#s1">Ilustrações e Pinturas</a>
+  <a href="#s2">Indígenas Sementes de Sol</a>
+  <a href="#s3">Natureza</a>
+  <a href="#s4">Feminino</a>
+  <a href="#s5">Livro</a>
+  <a href="#s6">A Artista</a>
 </div>
 
-<!-- MAIN -->
 <div class="main">
 
-  <section id="feminino" class="section">
-    <div class="section-content">
-      <div class="text">
-        <h2>FEMININO SAGRADO</h2>
-        <p>Expressão conectada aos ciclos e à potência criadora.</p>
-      </div>
-      <div class="gallery">
-        <div class="item"><img src="https://picsum.photos/400/600"></div>
-        <div class="item"><img src="https://picsum.photos/400/500"></div>
-      </div>
-    </div>
-  </section>
+<!-- SEÇÃO 1 -->
+<section id="s1" class="section">
+<div class="section-content">
+<div class="text">
+<h1>Ilustrações e Pinturas</h1>
+<h2>O Feminino e a Terra</h2>
+<p>Expressões visuais que conectam corpo, natureza e espiritualidade feminina.</p>
+</div>
+<div class="gallery">
+<div class="item"><figure><img src="https://picsum.photos/400/600"><figcaption>Obra 1</figcaption></figure></div>
+<div class="item"><figure><img src="https://picsum.photos/400/500"><figcaption>Obra 2</figcaption></figure></div>
+</div>
+</div>
+</section>
 
-  <section id="natureza" class="section">
-    <div class="section-content reverse">
-      <div class="text">
-        <h2>NATUREZA</h2>
-        <p>A natureza como inspiração contínua.</p>
-      </div>
-      <div class="gallery">
-        <div class="item"><img src="https://picsum.photos/400/400"></div>
-        <div class="item"><img src="https://picsum.photos/400/650"></div>
-      </div>
-    </div>
-  </section>
+<!-- SEÇÃO 2 -->
+<section id="s2" class="section">
+<div class="section-content reverse">
+<div class="text">
+<h1>Indígenas Sementes de Sol</h1>
+<h2>Representação da ancestralidade viva e conexão com a terra</h2>
+<p>Trabalhos que evocam a memória dos povos originários e sua relação espiritual com o território.</p>
+</div>
+<div class="gallery">
+<div class="item"><figure><img src="https://picsum.photos/400/550"><figcaption>Obra indígena</figcaption></figure></div>
+</div>
+</div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section id="s3" class="section">
+<div class="section-content">
+<div class="text">
+<h1>Ilustrações e Pinturas</h1>
+<h2>O Feminino e a Terra</h2>
+<p>Explorações visuais da natureza e seus ciclos.</p>
+</div>
+<div class="gallery">
+<div class="item"><figure><img src="https://picsum.photos/400/520"><figcaption>Natureza viva</figcaption></figure></div>
+</div>
+</div>
+</section>
+
+<!-- SEÇÃO 4 -->
+<section id="s4" class="section">
+<div class="section-content reverse">
+<div class="text">
+<h1>Ilustrações e Pinturas o Feminino</h1>
+<h2>Ilustrações e Pinturas em Tinta Acrílica e Aquarela</h2>
+<p>Obras que exploram técnica e sensibilidade.</p>
+</div>
+<div class="gallery">
+<div class="item"><figure><img src="https://picsum.photos/400/530"><figcaption>Aquarela feminina</figcaption></figure></div>
+</div>
+</div>
+</section>
+
+<!-- SEÇÃO 5 -->
+<section id="s5" class="section">
+<div class="section-content">
+<div class="text">
+<h1>A Iniciação Feminina</h1>
+<h2>Livro artístico e simbólico</h2>
+<p>Projeto editorial que aborda a jornada de iniciação feminina.</p>
+</div>
+<div class="gallery">
+<div class="item"><figure><img src="https://picsum.photos/400/540"><figcaption>Livro</figcaption></figure></div>
+</div>
+</div>
+</section>
+
+<!-- SEÇÃO 6 -->
+<section id="s6" class="section">
+<div class="section-content reverse">
+<div class="text">
+<h1>A Artista</h1>
+<h2>Sobre Silvia Gilwanová</h2>
+<p>Artista visual que trabalha com espiritualidade, natureza e feminino como linguagem estética e simbólica.</p>
+</div>
+<div class="gallery">
+<div class="item"><figure><img src="https://picsum.photos/400/560"><figcaption>Retrato</figcaption></figure></div>
+</div>
+</div>
+</section>
+
+<!-- CONTATO INTERNO -->
+<div class="contact-box">
+<strong>Entre em Contato</strong><br><br>
+WhatsApp: (11) 97037-4811<br>
+E-mail: silviagilwan.art@gmail.com<br>
+Local: Ateliê Casa Hateva, Mogi das Cruzes, SP<br><br>
+Instagram<br>
+Facebook
+</div>
 
 </div>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/5511970374811" target="_blank">
-  WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/5511970374811">WhatsApp</a>
 
-<!-- RODAPÉ -->
 <div class="footer">
-  Todos os direitos reservados Casa Hateva<br><br>
-  2026 Escola Hateva de Artes. Todos os direitos reservados - 
-  Artista Silvia Gilwanová - escolahateva.art.br
+Todos os direitos reservados Casa Hateva<br><br>
+2026 Escola Hateva de Artes. Todos os direitos reservados - 
+Artista Silvia Gilwanová - escolahateva.art.br
 </div>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img id="lightbox-img">
-</div>
-
-<script>
-const imgs = document.querySelectorAll(".item img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-imgs.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
 
 </body>
 </html>
