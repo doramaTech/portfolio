@@ -9,49 +9,73 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
 }
 
-/* TOPO */
+/* TOPO FIXO */
 .topbar {
+  position: fixed;
+  top: 0;
   width: 100%;
+  background: #fff;
   text-align: center;
-  padding: 40px 20px;
-  font-size: 32px;
+  padding: 25px;
+  font-size: 28px;
   letter-spacing: 3px;
   border-bottom: 1px solid #eee;
+  z-index: 1000;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 220px;
-  padding: 30px 20px;
-  border-right: 1px solid #eee;
   position: fixed;
-  top: 120px;
-  height: calc(100vh - 120px);
+  top: 100px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 100px);
+  padding: 20px;
+  border-right: 1px solid #eee;
   background: #fff;
+  overflow-y: auto;
 }
 
 .sidebar h1 {
   font-size: 14px;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .sidebar a {
   display: block;
   text-decoration: none;
   color: #111;
-  margin: 10px 0;
+  margin: 8px 0;
   font-size: 13px;
+}
+
+/* CAIXA CONTATO */
+.contact-box {
+  margin-top: 20px;
+  background: #f1f1f1;
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.contact-box strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-box a {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  margin-top: 5px;
 }
 
 /* MAIN */
 .main {
   margin-left: 240px;
-  margin-top: 20px;
+  padding-top: 120px;
 }
 
 /* SEÇÕES */
@@ -75,7 +99,6 @@ body {
 
 .text h2 {
   font-size: 16px;
-  letter-spacing: 2px;
 }
 
 .text p {
@@ -113,6 +136,14 @@ body {
   text-decoration: none;
 }
 
+/* RODAPÉ */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 30px 20px;
+  color: #555;
+}
+
 /* LIGHTBOX */
 .lightbox {
   position: fixed;
@@ -129,30 +160,7 @@ body {
   max-height:90%;
 }
 
-/* FOOTER */
-.footer {
-  background: #f8f8f8;
-  padding: 40px 20px;
-  margin-top: 40px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.footer a {
-  color: #111;
-  text-decoration: none;
-}
-
-.social {
-  margin-top: 15px;
-}
-
-.social a {
-  margin: 0 10px;
-  font-size: 18px;
-}
-
-/* RESPONSIVO */
+/* MOBILE */
 @media(max-width: 900px){
   .sidebar { display: none; }
   .main { margin: 0; }
@@ -185,16 +193,27 @@ body {
   <a href="#feminino">Feminino Sagrado</a>
   <a href="#natureza">Natureza</a>
   <a href="#indigenas">Indígenas Semente Sol</a>
+
+  <!-- CONTATO -->
+  <div class="contact-box">
+    <strong>Entre em Contato</strong>
+    WhatsApp: (11) 97037-4811<br>
+    E-mail: silviagilwan.art@gmail.com<br>
+    Local: Ateliê Casa Hateva, Mogi das Cruzes, SP
+
+    <a href="https://www.instagram.com/silviagilvanova.art" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/silvia.desimone.792" target="_blank">Facebook</a>
+  </div>
 </div>
 
+<!-- MAIN -->
 <div class="main">
 
-  <!-- SEÇÃO 1 -->
   <section id="feminino" class="section">
     <div class="section-content">
       <div class="text">
         <h2>FEMININO SAGRADO</h2>
-        <p>Expressão artística conectada aos ciclos, à ancestralidade e à potência criadora feminina.</p>
+        <p>Expressão conectada aos ciclos e à potência criadora.</p>
       </div>
       <div class="gallery">
         <div class="item"><img src="https://picsum.photos/400/600"></div>
@@ -203,12 +222,11 @@ body {
     </div>
   </section>
 
-  <!-- SEÇÃO 2 -->
   <section id="natureza" class="section">
     <div class="section-content reverse">
       <div class="text">
         <h2>NATUREZA</h2>
-        <p>A natureza como inspiração contínua e espelho da vida.</p>
+        <p>A natureza como inspiração contínua.</p>
       </div>
       <div class="gallery">
         <div class="item"><img src="https://picsum.photos/400/400"></div>
@@ -224,33 +242,11 @@ body {
   WhatsApp
 </a>
 
-<!-- FOOTER -->
+<!-- RODAPÉ -->
 <div class="footer">
-
-  <p><strong>Todos os direitos reservados Casa Hateva</strong></p>
-
-  <p>
-    Artista Silvia Gilwanová - 
-    <a href="https://escolahateva.art.br/" target="_blank">
-      escolahateva.art.br
-    </a>
-  </p>
-
-  <p>2026 Escola Hateva de Artes. Todos os direitos reservados.</p>
-
-  <br>
-
-  <p><strong>Entre em Contato</strong></p>
-
-  <p>WhatsApp: (11) 97037-4811</p>
-  <p>E-mail: silviagilwan.art@gmail.com</p>
-  <p>Local: Ateliê Casa Hateva, Mogi das Cruzes, SP</p>
-
-  <div class="social">
-    <a href="https://www.instagram.com/silviagilvanova.art" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/silvia.desimone.792" target="_blank">Facebook</a>
-  </div>
-
+  Todos os direitos reservados Casa Hateva<br><br>
+  2026 Escola Hateva de Artes. Todos os direitos reservados - 
+  Artista Silvia Gilwanová - escolahateva.art.br
 </div>
 
 <!-- LIGHTBOX -->
